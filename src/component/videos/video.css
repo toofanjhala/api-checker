@@ -1,0 +1,26 @@
+.api-verifier-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* set height to full viewport height */
+  }
+  
+  .api-verifier-box {
+    position: relative;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+  }
+  .video{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 20px;
+  }

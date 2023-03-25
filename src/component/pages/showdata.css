@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+     margin: 100px;
+  }
+  
+
+.box {
+    background-color: #f8f8f8;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .boxheader {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .jsondata {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+  
