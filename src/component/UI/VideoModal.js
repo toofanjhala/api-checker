@@ -15,14 +15,14 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-   
+
     border: 'none',
     borderRadius: '8px',
     padding: '8px',
     width: '800px',
     height: '400px',
-   backgroundColor:"#a1c4fd",
-   margin:"3px"
+    backgroundColor: "#a1c4fd",
+    margin: "3px"
   },
 };
 
@@ -58,39 +58,48 @@ const VideoModal = ({ onClose, videoData }) => {
               height="100%"
             />
           )}
-          <button onClick={handleCloseModal}  className="button">Close</button>
+          <button onClick={handleCloseModal} className="button">Close</button>
         </div>
       </Modal>
 
       <Modal
-      
+
         isOpen={currentModal === 'videoList'}
         onRequestClose={() => onClose()}
         style={customStyles}
         shouldCloseOnOverlayClick={false}
       >
-      <button onClick={onClose} className="button" >Close</button>
+        <button onClick={onClose} className="button" >Close</button>
         <div className="video-list">
           <h2>Select a video to play</h2>
           <div className="video-thumbnail">
-          <div className="scrollable-videos">
-  {videoData.map((video) => (
-    <div key={video.id} className="video-thumbnail"> 
-      <img
-        src='https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png'
-        alt={video.name}
-        onClick={() => handleVideoClick(video)}
-      />
-      <p>{video.name}</p>
-    </div>
-  ))}
-</div>
+            <div className="scrollable-videos" style={{display:"flex", flexWrap: "nowrap",
+  overflowX: "auto",
+  margin: "2px"}}>
+              {videoData.map((video) => (
+                <div key={video.id} className="video-thumbnail">
+                  <img
+                    src='https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png'
+                    alt={video.name}
+                    onClick={() => handleVideoClick(video)}
+                    style={{
+                      width: "20rem",
+                      height: "9rem"
+                    }}
+                  />
+                  <p style={{
+                    marginTop: "10px",
+  fontSize: "30px",
+  fontWeight: "bold", margin: "2px",justifyContent:"spaceAround"}}>{video.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        
+
       </Modal>
 
-      
+
     </>
   );
 };
