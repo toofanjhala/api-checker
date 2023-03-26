@@ -8,6 +8,7 @@ import Spinner from './UI/Spinner';
 const Autoverifier = () => {
   const [videos, setVideos] = useState([]);
   const [count, setCount] = useState(35);
+  const [spinner,setspinner]=useState(false)
  
 
   const clientId = 'my-client-id';
@@ -52,15 +53,21 @@ const Autoverifier = () => {
 
   useEffect(() => {
     if (count === 0) {
-    
-      memoizedFetchData();
+
+      setspinner(true)
+      async function fun(){
+        await  memoizedFetchData();
+      setspinner(false)
+      }
+       fun()
+       
       setCount(35);
     }
   }, [count, memoizedFetchData]);
 
   return (
     <>
-       
+       {spinner && <Spinner/>}
       <section className="api-verifier-box-container">
         <div className="api-verifier-box">
           <div className="api-verifier-header">API Auto Verifier</div>

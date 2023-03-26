@@ -1,14 +1,16 @@
 
 
 .spinner {
-  width: 70px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333;
+  background-color: #520000;
 
   border-radius: 100%;
   display: inline-block;
