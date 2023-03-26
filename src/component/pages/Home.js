@@ -9,8 +9,12 @@ import { Video } from "../videos/video"
 
 
 export const Home = () => {
+ 
   return (
-    <div><div className="display">
+    <div>
+    <h2> WELCOME TO THE API CHECKER WORLD</h2>
+    <div className="display">
+    
     <Autoverifier/>
     <Manualverifier/>
     <Video/>

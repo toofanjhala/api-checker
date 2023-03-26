@@ -55,10 +55,10 @@ const VideoModal = ({ onClose, videoData }) => {
               controls
               playing
               width="100%"
-              height="100%"
+              height="300px"
             />
           )}
-          <button onClick={handleCloseModal} className="button">Close</button>
+          <button onClick={handleCloseModal} className="button"  style={{marginTop:"20px"}}>Close</button>
         </div>
       </Modal>
 
@@ -83,14 +83,15 @@ const VideoModal = ({ onClose, videoData }) => {
                     alt={video.name}
                     onClick={() => handleVideoClick(video)}
                     style={{
-                      width: "20rem",
-                      height: "9rem"
+                      width: "7rem",
+                      height: "5rem",
+                      paddingRight:"40px"
                     }}
                   />
                   <p style={{
-                    marginTop: "10px",
-  fontSize: "30px",
-  fontWeight: "bold", margin: "2px",justifyContent:"spaceAround"}}>{video.name}</p>
+                    marginTop: "5px",
+  fontSize: "15px",
+  fontWeight: "bold", margin: "3px",justifyContent:"spaceAround" ,paddingRight:"40px", paddingBottom:"8rem"}}>{video.name}</p>
                 </div>
               ))}
             </div>

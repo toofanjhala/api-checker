@@ -16,7 +16,7 @@ export const ShowData = () => {
     <div className="jsondata">
     {showdata}
     </div>
-    <button onClick={navigateHandler}>Close</button>
+    <button className="closebutton" onClick={navigateHandler}>Close</button>
    </div>
    </div>
   )
